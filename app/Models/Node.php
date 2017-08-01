@@ -8,5 +8,7 @@ class Node extends Model
 {
     protected $fillable = ['name', 'is_root'];
 
-//    public function getSynonyms
+    public function relationships(){
+        return $this->hasMany('App\Models\Relationship', 'rhs_id');
+    }
 }

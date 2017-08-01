@@ -17,12 +17,14 @@ class CreateOntTables extends Migration
             $table->increments('id');
             $table->string('name');
             $table->boolean('is_root')->default(0);
+            $table->timestamps();
         });
 
         Schema::create('relations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('short_name');
             $table->string('long_name');
+            $table->timestamps();
         });
 
         Schema::create('relationships', function (Blueprint $table) {
@@ -33,6 +35,7 @@ class CreateOntTables extends Migration
             $table->foreign('rhs_id')->references('id')->on('nodes')->onDelete('cascade');
             $table->integer('relation_id')->unsigned();
             $table->foreign('relation_id')->references('id')->on('relations')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

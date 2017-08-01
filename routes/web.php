@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.default');
-});
+Route::get('/', 'NodeController@getRoot');
+
+Route::get('/node/{nodeId}', 'NodeController@getNode');
