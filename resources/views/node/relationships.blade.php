@@ -32,7 +32,7 @@
             </thead>
             @foreach($childRelationships as $r)
                 <tr>
-                    <td><a href="/node/{{$r->lhs->id}}">{{ $r->lhs->name }}</a></td>
+                    <td><a href="/ontology/node/{{$r->lhs->id}}">{{ $r->lhs->name }}</a></td>
                     <td>{{ $r->relation->lhs_name }}</td>
                 </tr>
             @endforeach
@@ -54,7 +54,7 @@
             </thead>
             @foreach($parentRelationships as $r)
                 <tr>
-                    <td><a href="/node/{{$r->rhs->id}}">{{ $r->rhs->name }}</a></td>
+                    <td><a href="/ontology/node/{{$r->rhs->id}}">{{ $r->rhs->name }}</a></td>
                     <td>{{ $r->relation->rhs_name }}</td>
                 </tr>
             @endforeach

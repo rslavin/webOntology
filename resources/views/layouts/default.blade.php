@@ -39,7 +39,7 @@
     <div class="container">
         {{--<a class="blog-nav-item h1" href="/">PoliDroid</a>--}}
         <nav class="blog-nav">
-            <a class="blog-nav-item {{isset($title) && $title == 'Home' ? 'active' : ''}}" href="/">Home</a>
+            <a class="blog-nav-item {{isset($title) && $title == 'Home' ? 'active' : ''}}" href="/ontology">Home</a>
             {{--<a class="blog-nav-item {{isset($title) && $title == 'PVDetector' ? 'active' : ''}}" href="/pvdetector">PVDetector</a>--}}
             {{--<a class="blog-nav-item {{isset($title) && $title == 'Source Code Analyzer' ? 'active' : ''}}" href="/source-analyzer">Source Code Analyzer</a>--}}
             {{--<a class="blog-nav-item {{isset($title) && $title == 'PoliDroid-AS' ? 'active' : ''}}" href="/plugin">Android Studio Plugin</a>--}}
